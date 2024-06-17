@@ -17,6 +17,7 @@ jobs:
       WXWORK_WEBHOOK: ${{ secrets.WXWORK_WEBHOOK }}
       TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
       TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+      FEI_SHU_WEBHOOK: ${{ secrets.FEI_SHU_WEBHOOK }}
     runs-on: ubuntu-latest
 
     steps:
