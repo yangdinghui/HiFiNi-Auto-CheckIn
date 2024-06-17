@@ -6,6 +6,7 @@ package cloud.ohiyou;
  */
 
 import cloud.ohiyou.utils.DingTalkUtils;
+import cloud.ohiyou.utils.FeiShuUtils;
 import cloud.ohiyou.utils.TelegramUtils;
 import cloud.ohiyou.utils.WeChatWorkUtils;
 import cloud.ohiyou.vo.CookieSignResult;
@@ -139,6 +140,8 @@ public class Main {
         WeChatWorkUtils.pushBotMessage(WXWORK_WEBHOOK, title, messageBuilder.toString(), "markdown"); // 推送企业微信机器人
         DingTalkUtils.pushBotMessage(DINGTALK_WEBHOOK, title, messageBuilder.toString(), "", "markdown"); // 推送钉钉机器人
         TelegramUtils.publishTelegramBot(TG_CHAT_ID, TG_BOT_TOKEN, "HiFiNi签到消息: \n" + title + "：\n" + messageBuilder.toString()); // push telegram bot
+        FeiShuUtils.sendNotice("HiFiNi签到消息: \n" + title + "：\n" + messageBuilder); // 推送飞书
+
     }
 
 
