@@ -48,9 +48,6 @@ public class FeiShuUtils {
             }
         } catch (Exception e) {
             log.error("飞书消息发送失败", e);
-        } finally {
-            client.dispatcher().executorService().shutdown();
-            client.connectionPool().evictAll();
         }
     }
 
